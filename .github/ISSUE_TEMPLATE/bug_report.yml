@@ -1,0 +1,76 @@
+name: Bug report
+description: A tool returned something wrong, failed, or the bridge won't connect.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Security problems go to the **Security** tab → **Report a vulnerability**, never here.
+        Remove names, emails, tokens, cookies and customer data from anything you paste.
+  - type: input
+    id: extension-version
+    attributes:
+      label: Extension version
+      description: From about:addons.
+      placeholder: "0.6.0"
+    validations:
+      required: true
+  - type: input
+    id: firefox-version
+    attributes:
+      label: Firefox version and edition
+      placeholder: "Developer Edition 160.0b4"
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: OS, Node version and MCP client
+      placeholder: "macOS 15.6, Node 24.1, <your MCP client and its version>"
+    validations:
+      required: true
+  - type: textarea
+    id: call
+    attributes:
+      label: Tool call
+      description: The tool and its arguments.
+      placeholder: 'read_page({ depth: 2, skip_nav: true })'
+      render: text
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: What came back
+      description: Paste the text result. Trim it if it's long.
+      render: text
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+    validations:
+      required: true
+  - type: input
+    id: page
+    attributes:
+      label: Public page that shows it
+      description: A URL anyone can open, or say if you've attached a small HTML file instead.
+  - type: textarea
+    id: log
+    attributes:
+      label: Native host log (connection problems only)
+      description: The last 20 lines of ~/.firefox-mcp/native-host.log.
+      render: text
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: I'm on the latest release and searched existing issues.
+          required: true
+        - label: This isn't one of the limitations listed in the README.
+          required: true
+        - label: I removed private data from everything above.
+          required: true

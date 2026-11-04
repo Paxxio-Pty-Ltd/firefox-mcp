@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <span id="status-dot"></span>
+    <span id="status">Connecting…</span>
+    <span id="controls"></span>
+  </header>
+  <p id="control-note" hidden></p>
+  <main id="pending"></main>
+  <p id="empty" hidden>Nothing is waiting for you.</p>
+  <section id="this-site" hidden>
+    <label for="trust">What the agent may do on <strong id="site-host"></strong></label>
+    <select id="trust">
+      <option value="read">Read only</option>
+      <option value="ask">Ask before risky actions</option>
+      <option value="trusted">Everything, no approvals</option>
+    </select>
+  </section>
+  <details id="activity" open hidden>
+    <summary>Recent actions <span id="token-total"></span></summary>
+    <ol id="activity-list"></ol>
+  </details>
+  <details id="sites" hidden>
+    <summary>Site settings</summary>
+    <ul id="site-list"></ul>
+  </details>
+  <script src="popup.js"></script>
+</body>
+</html>

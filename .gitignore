@@ -1,0 +1,28 @@
+# Dependencies
+node_modules/
+
+# Build output (build.sh packages the extension into dist/*.xpi)
+dist/
+*.xpi
+
+# Logs
+*.log
+npm-debug.log*
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Local tooling state
+.impeccable/
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*~
+
+# OS
+.DS_Store
+Thumbs.db

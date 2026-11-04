@@ -1,0 +1,25 @@
+{
+  "name": "firefox-mcp-server",
+  "version": "0.6.0",
+  "private": true,
+  "type": "module",
+  "description": "MCP server and native messaging host for the Firefox MCP Bridge extension",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Paxxio-Pty-Ltd/firefox-mcp.git",
+    "directory": "server"
+  },
+  "homepage": "https://github.com/Paxxio-Pty-Ltd/firefox-mcp#readme",
+  "bugs": "https://github.com/Paxxio-Pty-Ltd/firefox-mcp/issues",
+  "engines": {
+    "node": ">=18"
+  },
+  "bin": {
+    "firefox-mcp": "src/mcp-server.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.1",
+    "zod": "^4.6.6"
+  }
+}
